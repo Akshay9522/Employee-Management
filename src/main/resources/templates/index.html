@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;font-size:150%;">
+<h1 style="text-align:center;">Employee form</h1>
+<a href="http://localhost:8080/info">display Employee information</a>
+<h4>Please fill the following details</h4>
+<p style="color:red;">welcome to orgnization!!!!!</p>
+<form action="register" method="post">
+ <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"value="Enter your First Name">
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"value="Enter your Last Name"><br>
+  
+  <label for="age">Enter your age:</label>
+   <input type="text" id="age" name="age" value="Enter your age">   
+  <label for="gender">select your gender:</label>
+  <select id="gender" name="gender">
+    <option value=""></option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select><br>
+  <label for="dob">Enter date of birth:</label>
+  <input type="date" id="dob" name="dob"><br>
+ <button>submit</button>
+</form>
+
+
+</body>
+</html>
