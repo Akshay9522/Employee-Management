@@ -1,0 +1,33 @@
+version: "3"
+services:
+  springboot-app:
+    image: akshay9522/employee
+    restart: always
+    ports: 
+    - 8080:8080
+    build: .
+    depends_on:
+     - mysqldb
+    environment:
+     spring.datasource.url: jdbc:mysql://mysqldb:3306/Employee?autoReconnect=true&useSSL=false
+     spring.datasource.username: root
+     spring.datasource.password: root
+     MYSQL_Host: mysqldb
+    networks:
+     - service1 
+    
+  mysqldb:
+   image: mysql:8.0
+   volumes:
+    - C:/Users/Admin/Desktop/db:/var/lib/mysql
+   ports: 
+    - 3308:3306
+   environment:
+    MYSQL_DATABASE: Employee
+    MYSQL_ROOT_PASSWORD: root
+   networks:
+    - service1
+    
+networks:
+  service1:
+   
